@@ -1,0 +1,7 @@
+set term png small size 800,600
+set output "output/cpu-graph.png"
+set ylabel "%CPU"
+set ytics nomirror
+set yrange [0:*]
+set datafile separator ","
+plot "log/monitor.csv" using 0:2 with lines axes x1y1 title "%CPU"
