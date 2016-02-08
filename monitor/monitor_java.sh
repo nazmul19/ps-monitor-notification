@@ -1,1 +1,1 @@
-{ ps aux|awk  '{print ","$2,","$3,","$4}'|grep 14947 & echo -n $(date +%s);}
+{ ps aux | grep tomcat7 | grep java | awk  '{print ","$2,","$3,","$4}' & echo -n $(date +%s);}
